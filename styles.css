@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.nav-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(231, 231, 231);
+}
+
+.nav-section img {
+    width: 10%;
+    height: auto;
+    margin-right: auto;
+}
+
+.nav-section ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.nav-section ul li a {
+    text-decoration: none;
+    color: rgb(255, 123, 15);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-right: 30px;
+    transition: color 0.6s;
+}
+
+.nav-section ul li a:hover {
+    color: rgb(255, 167, 5);
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+.bar {
+    height: 3px;
+    width: 30px;
+    background-color: #000;
+    transition: all 1s;
+}
+
+.bar-1-active {
+    background-color: rgb(255, 123, 15);
+    transform: rotate(45deg) translate(10px, 9px);
+}
+
+.bar-2-active {
+    opacity: 0;
+}
+
+.bar-3-active {
+    background-color: rgb(255, 123, 15);
+    transform: rotate(-45deg) translate(10px, -9px);
+}
+
+.hero-image {
+    background-image: url("img/Mountains.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8%;
+    color: beige;
+}
+
+.hero-image h1 {
+    font-size: 2.75rem;
+    text-align: center;
+}
+
+.hero-image p {
+    margin: 3%;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.hero-image button {
+    border: none;
+    background-color: rgb(255, 123, 15);
+    border-radius: 50px;
+    padding: 20px 30px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.6s;
+}
+
+.hero-image button:hover {
+    background-color: rgb(255, 167, 5);
+}
+
+.icons-section {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    margin: 2%;
+}
+
+.icons-section-h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 30px 0;
+    padding-bottom: 18px;
+    width: 400px;
+    border-bottom: 5px solid rgb(255, 123, 15);
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+.icon-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 3%;
+    padding: 3%;
+}
+
+.icon-component i {
+    font-size: 2.5rem;
+    color: rgb(255, 123, 15);
+}
+
+.icon-component h3 {
+    margin: 10px;
+    font-size: 1.25rem;
+}
+
+.info-section-all {
+    background-color: rgb(231, 231, 231);
+    padding: 3%;
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.info-section img {
+    width: 300px;
+    height: 350px;
+}
+
+.info-section-h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-bottom: 18px;
+    border-bottom: 5px solid rgb(255, 123, 15);
+    border-radius: 50%;
+    width: 400px;
+    margin: 20px auto;
+}
+
+footer {
+    background-color: #000;
+    color: rgb(255, 123, 15);
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    padding: 10px 0;
+}
+
+@media only screen and (max-width: 1030px) {
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+
+    .info-section div {
+        margin: 20px 0;
+    }
+
+    .info-section img {
+        width: 400px;
+        height: 450px;
+    }
+}
+
+@media only screen and (max-width: 944px) {
+    .icons-section {
+        display: grid; 
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .icon-component {
+        margin: 8%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .nav {
+        display: none;
+    }
+
+    .hamburger-icon {
+        width: 40px;
+        height: 40px;
+        border: solid 3px #000;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    .icons-section {
+        display: grid; 
+        grid-template-columns: 1fr;
+    }
+
+    .icon-component {
+        margin: 7%;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 535px) {
+
+    .info-section div {
+        margin: 10px 0;
+    }
+
+    .info-section img {
+        width: 300px;
+        height: 350px;
+    }
+}
